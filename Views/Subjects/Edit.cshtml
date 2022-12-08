@@ -1,0 +1,10 @@
+﻿@model Subject
+<form asp-action="Edit"> 
+    <div class="form-group">
+        <label asp-for="Name">Název:</label>
+        <input type="text" asp-for="@Model.Name" class="form-control"/>   
+    </div>
+    <div>
+        <input type="submit" class="btn btn-warning" value="Změnit"/>
+    </div>
+</form>

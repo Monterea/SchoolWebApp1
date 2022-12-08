@@ -1,0 +1,9 @@
+﻿@model Student
+<div class="border border-2 border-secondary">
+    <h6>Student: @Model.FirstName @Model.LastName</h6>
+    <p>Číslo: @Model.Id</p>
+    <p>Datum narození: @Model.DateOfBirth.ToShortDateString()</p>
+    <a class="btn btn-warning">Edit</a>
+    <a class="btn btn-danger">Delete</a>
+</div>
+

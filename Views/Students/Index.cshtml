@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Student>
+@foreach(var student in Model) {    
+<div class="border border-2 border-secondary">
+    <h6>@student.FirstName @student.LastName</h6>
+    <p>Identifikační číslo: @student.Id</p>
+    <p>Datum narození: @student.DateOfBirth.ToShortDateString()</p>
+    <a class="btn btn-warning" asp-action="Edit" asp-route-id=@student.Id>Změnit</a>
+    <a class="btn btn-danger" asp-action="Delete" asp-route-id=@student.Id>Smazat</a>
+</div>
+}
+<div>
+    <p></p>
+<a class="btn btn-primary" asp-action="Create">Nový student</a>
+</div>
